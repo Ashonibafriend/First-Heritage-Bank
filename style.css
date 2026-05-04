@@ -1,13 +1,15 @@
 /* BASE STYLES & VARIABLES */
 :root {
-    --bg-dark: #0f1012;
-    --bg-panel: #1a1b1e;
-    --bg-panel-hover: #23252a;
-    --accent-red: #efbb20; /* Brand gold */
-    --accent-red-hover: #dca816;
+    --bg-dark: #0d1b3e; /* Deep Navy Blue */
+    --bg-panel: #162a5e; /* Lighter Navy Blue */
+    --bg-panel-hover: #1e3575;
+    --accent-gold: #d4af37; /* Premium Gold */
+    --accent-gold-hover: #b8962e;
+    --accent-red: var(--accent-gold); 
+    --accent-red-hover: var(--accent-gold-hover);
     --text-main: #ffffff;
-    --text-muted: #9ba0a8;
-    --border-color: #2c2f36;
+    --text-muted: #cbd5e1;
+    --border-color: rgba(255, 255, 255, 0.1);
     
     --font-main: 'Inter', sans-serif;
     
@@ -35,6 +37,11 @@ body {
     color: var(--text-main);
     line-height: 1.6;
     overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--accent-gold);
+    font-weight: 700;
 }
 
 a {
@@ -348,7 +355,7 @@ button {
 }
 
 .hero-title span {
-    color: var(--accent-red);
+    color: white; /* Flip emphasis since title is gold */
 }
 
 @media (min-width: 768px) {
@@ -560,7 +567,8 @@ button {
 }
 
 .box-panel:hover {
-    border-color: rgba(239, 187, 32, 0.3);
+    border-color: var(--accent-gold);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
 }
 
 .panel-header {
@@ -1288,7 +1296,7 @@ button {
 .bg-orbs::after {
     width: 400px;
     height: 400px;
-    background: #ffffff;
+    background: #4a90e2; /* Light blue orb */
     bottom: 10%;
     right: -100px;
     animation-delay: -7s;
@@ -1301,7 +1309,7 @@ button {
 
 /* Glassmorphism Header */
 .header {
-    background-color: rgba(15, 16, 18, 0.7) !important;
+    background-color: rgba(13, 27, 62, 0.8) !important;
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05) !important;
@@ -1309,21 +1317,21 @@ button {
 
 /* Premium Box Panels (Glassmorphic touches) */
 .box-panel {
-    background: linear-gradient(145deg, rgba(26, 27, 30, 0.9), rgba(20, 21, 24, 0.9)) !important;
+    background: linear-gradient(145deg, rgba(22, 42, 94, 0.95), rgba(13, 27, 62, 0.95)) !important;
     backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.03) !important;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.05) !important;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
 }
 .box-panel:hover {
     transform: translateY(-5px);
-    border-color: rgba(239, 187, 32, 0.4) !important;
-    box-shadow: 0 15px 40px rgba(239, 187, 32, 0.1);
+    border-color: var(--accent-gold) !important;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
 }
 
 /* Button Glows */
 .btn-primary {
-    box-shadow: 0 4px 15px rgba(239, 187, 32, 0.3);
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
     position: relative;
     overflow: hidden;
 }
@@ -1342,7 +1350,7 @@ button {
     left: 150%;
 }
 .btn-primary:hover {
-    box-shadow: 0 6px 20px rgba(239, 187, 32, 0.5);
+    box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
     transform: translateY(-2px);
 }
 
