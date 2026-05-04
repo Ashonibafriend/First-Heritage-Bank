@@ -1,25 +1,35 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Mobile menu toggle
-    const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileOverlay = document.getElementById('mobile-overlay');
     const mainNav = document.querySelector('.main-nav');
     
-    if (mobileMenuBtn && mainNav) {
-        mobileMenuBtn.addEventListener('click', () => {
-            mainNav.style.display = mainNav.style.display === 'block' ? 'none' : 'block';
-            mainNav.style.position = 'absolute';
-            mainNav.style.top = '100%';
-            mainNav.style.left = '0';
-            mainNav.style.width = '100%';
-            mainNav.style.backgroundColor = 'var(--bg-dark)';
-            mainNav.style.padding = '1rem 2rem';
-            mainNav.style.borderBottom = '1px solid var(--border-color)';
+    if (mobileMenuBtn && mainNav && mobileOverlay) {
+        const toggleMenu = () => {
+            mainNav.classList.toggle('is-open');
+            mobileOverlay.classList.toggle('is-visible');
+            document.body.style.overflow = mainNav.classList.contains('is-open') ? 'hidden' : '';
             
-            const navLinks = mainNav.querySelector('.nav-links');
-            if (navLinks) {
-                navLinks.style.flexDirection = 'column';
-                navLinks.style.alignItems = 'flex-start';
-                navLinks.style.gap = '1rem';
+            // Toggle icon
+            const icon = mobileMenuBtn.querySelector('i');
+            if (mainNav.classList.contains('is-open')) {
+                icon.setAttribute('data-lucide', 'x');
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
             }
+            lucide.createIcons();
+        };
+
+        mobileMenuBtn.addEventListener('click', toggleMenu);
+        mobileOverlay.addEventListener('click', toggleMenu);
+
+        // Close menu on link click
+        mainNav.querySelectorAll('.nav-item').forEach(link => {
+            link.addEventListener('click', () => {
+                if (mainNav.classList.contains('is-open')) {
+                    toggleMenu();
+                }
+            });
         });
     }
 

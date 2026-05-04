@@ -19,13 +19,22 @@
             
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="#" class="nav-item active"><i data-lucide="home" class="icon-sm"></i></a></li>
+                    <li><a href="#" class="nav-item active">Home <i data-lucide="home" class="icon-sm"></i></a></li>
                     <li><a href="#" class="nav-item">About Us <i data-lucide="chevron-down" class="icon-xs"></i></a></li>
                     <li><a href="#" class="nav-item">Investors <i data-lucide="chevron-down" class="icon-xs"></i></a></li>
                     <li><a href="#" class="nav-item">Our Impact <i data-lucide="chevron-down" class="icon-xs"></i></a></li>
                     <li><a href="#" class="nav-item">Media <i data-lucide="chevron-down" class="icon-xs"></i></a></li>
                     <li><a href="#" class="nav-item">Support <i data-lucide="chevron-down" class="icon-xs"></i></a></li>
                 </ul>
+                <div class="header-actions-mobile">
+                    <a href="#" class="btn-primary login-btn">
+                        <i data-lucide="lock" class="icon-sm"></i> Internet Banking
+                    </a>
+                    <div class="lang-selector">
+                        <img src="https://flagcdn.com/w20/ng.png" alt="Nigeria" class="flag-icon">
+                        <span>Nigeria <i data-lucide="chevron-down" class="icon-xs"></i></span>
+                    </div>
+                </div>
             </nav>
             
             <div class="header-actions">
@@ -39,10 +48,11 @@
                 </a>
             </div>
             
-            <button class="mobile-menu-btn">
+            <button class="mobile-menu-btn" id="mobile-menu-btn">
                 <i data-lucide="menu"></i>
             </button>
         </div>
+        <div class="mobile-overlay" id="mobile-overlay"></div>
     </header>
 
     <!-- HERO SECTION -->
@@ -322,44 +332,60 @@
                     <ul>
                         <li><a href="#">Who We Are</a></li>
                         <li><a href="#">Our History</a></li>
-                        <li><a href="#">Board and Management</a></li>
+                        <li><a href="#">Management</a></li>
                         <li><a href="#">Careers</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-col">
                     <h4>Products</h4>
                     <ul>
-                        <li><a href="#">Savings Accounts</a></li>
-                        <li><a href="#">Demand Deposits</a></li>
-                        <li><a href="#">Apply for Loan</a></li>
-                        <li><a href="#">Investments</a></li>
+                        <li><a href="#">Savings</a></li>
+                        <li><a href="#">SME Loans</a></li>
+                        <li><a href="#">Micro-Credit</a></li>
+                        <li><a href="#">Group Savings</a></li>
                     </ul>
                 </div>
-                <div class="footer-col">
-                    <h4>Help & Support</h4>
-                    <ul>
-                        <li><a href="#">Find a Branch</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Whistle Blowing</a></li>
+
+                <div class="footer-col footer-col-wide">
+                    <h4>Head Office</h4>
+                    <ul class="contact-list">
+                        <li>
+                            <span>Opp. C.C.C Omu-Aran Road, Oro-Ago, PMB 1012 Ifelodun LGA, Kwara State.</span>
+                        </li>
+                        <li>
+                            <i data-lucide="mail" class="icon-xs text-red"></i>
+                            <a href="mailto:heritagemfb@gmail.com">heritagemfb@gmail.com</a>
+                        </li>
+                        <li>
+                            <i data-lucide="phone" class="icon-xs text-red"></i>
+                            <div class="phone-group">
+                                <span>070-3825-0664</span>
+                                <span>080-6627-4445</span>
+                            </div>
+                        </li>
                     </ul>
                 </div>
-                <div class="footer-col" style="grid-column: span 2;">
-                    <h4>Connect</h4>
-                    <ul class="social-links" style="flex-direction: row; gap: 1.5rem;">
-                        <li><a href="#"><i data-lucide="facebook"></i> Facebook</a></li>
-                        <li><a href="#"><i data-lucide="twitter"></i> Twitter</a></li>
-                        <li><a href="#"><i data-lucide="instagram"></i> Instagram</a></li>
+
+                <div class="footer-col footer-col-wide">
+                    <h4>Branch Offices</h4>
+                    <ul class="branch-list">
+                        <li><strong>Idofian:</strong> Opp CCC Church Ajase-Ipo Road, Idofian</li>
+                        <li><strong>Igbaja:</strong> Olaiya Compound, Igbaja</li>
+                        <li><strong>Ganmo:</strong> Ile Motor, Ganmo</li>
+                        <li><strong>Share:</strong> Ile Okose, Opp Baale Road, Share</li>
                     </ul>
-                    
-                    <div class="footer-apps mt-4">
-                        <h4>Get The App</h4>
-                        <div class="store-links" style="gap: 1rem;">
-                            <a href="#" class="store-btn-small"><img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Download_on_the_App_Store_Badge.svg" alt="App Store"></a>
-                            <a href="#" class="store-btn-small"><img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" alt="Google Play"></a>
-                        </div>
-                    </div>
                 </div>
+            </div>
+
+            <div class="footer-social-row">
+                <div class="social-tag">Connect with us:</div>
+                <ul class="social-links-h">
+                    <li><a href="#"><i data-lucide="facebook"></i> First Heritage Microfinance Bank Ltd</a></li>
+                    <li><a href="#"><i data-lucide="twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i data-lucide="instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i data-lucide="linkedin"></i> LinkedIn</a></li>
+                </ul>
             </div>
             
             <div class="footer-bottom">
